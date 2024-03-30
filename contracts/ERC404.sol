@@ -818,4 +818,11 @@ abstract contract ERC404 is IERC404 {
 
     _ownedData[id_] = data;
   }
+
+  function getReadebleTokenId(uint256 id_) public pure returns (uint256) {
+    if (_isValidTokenId(id_)) {
+      return id - ID_ENCODING_PREFIX;
+    }
+    revert InvalidTokenId();
+  }
 }
