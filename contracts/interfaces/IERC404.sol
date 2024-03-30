@@ -89,5 +89,5 @@ interface IERC404 is IERC165 {
     bytes32 r_,
     bytes32 s_
   ) external;
-  function getReadebleTokenId(uint256 id_) public pure returns (uint256);
+  function getReadableTokenId(uint256 id_) public pure returns (uint256);
 }
